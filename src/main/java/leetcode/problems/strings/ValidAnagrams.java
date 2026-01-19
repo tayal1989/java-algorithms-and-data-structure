@@ -1,7 +1,7 @@
 package leetcode.problems.strings;
 
+import java.util.HashMap;
 import java.util.Map;
-import java.util.TreeMap;
 
 public class ValidAnagrams {
 
@@ -16,8 +16,8 @@ public class ValidAnagrams {
     public boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) return false;
 
-        Map<Character, Integer> map1 = new TreeMap<>();
-        Map<Character, Integer> map2 = new TreeMap<>();
+        Map<Character, Integer> map1 = new HashMap<>();
+        Map<Character, Integer> map2 = new HashMap<>();
 
         for(int i = 0; i < s.length(); i++) {
             if(map1.get(s.charAt(i)) != null) {

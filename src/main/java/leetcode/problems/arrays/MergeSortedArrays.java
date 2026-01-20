@@ -29,6 +29,5 @@ public class MergeSortedArrays {
         }
 
         System.out.println(Arrays.toString(nums1));
-
     }
 }

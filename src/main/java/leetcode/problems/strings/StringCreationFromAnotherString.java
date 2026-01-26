@@ -1,9 +1,5 @@
 package leetcode.problems.strings;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-
 public class StringCreationFromAnotherString {
 
     public static void main(String[] args) {

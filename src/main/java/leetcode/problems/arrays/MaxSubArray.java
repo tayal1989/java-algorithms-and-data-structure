@@ -21,18 +21,18 @@ public class MaxSubArray {
         if (nums.length == 0) { return 0; }
         if (nums.length == 1) { return nums[0]; }
 
-        int sum = nums[0];
+        int currentSum = nums[0];
         int maxSum = nums[0];
 
         for (int i = 1; i < nums.length; i++){
-            if(sum < 0) {
-                sum = nums[i];
+            if(currentSum < 0) {
+                currentSum = nums[i];
             } else {
-                sum = sum + nums[i];
+                currentSum = currentSum + nums[i];
             }
 
-            if (sum > maxSum) {
-                maxSum = sum;
+            if (currentSum > maxSum) {
+                maxSum = currentSum;
             }
         }
 

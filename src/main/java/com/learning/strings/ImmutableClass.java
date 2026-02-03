@@ -1,12 +1,25 @@
 package com.learning.strings;
 
-final class ImmutableClass {
+/**
+ * @author vishalagarwal
+ * @version Creation time: 03-Feb-2026 11:37:21 pm
+ * @classDescription To explain immutability in string
+ *
+ * Class is final → cannot be extended
+ * Make all fields private final
+ * No setter methods
+ * Methods return new objects, not modify existing
+ */
+public final class ImmutableClass {
+    private final int i;
 	
-	private int i;
-	
-	ImmutableClass(int i) {
+	public ImmutableClass(int i) {
 		this.i = i;
 	}
+
+    public int getI() {
+        return i;
+    }
 	
 	public ImmutableClass modify(int i) {
 		if(this.i == i) {

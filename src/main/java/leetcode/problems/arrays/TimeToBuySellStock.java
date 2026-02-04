@@ -1,7 +1,5 @@
 package leetcode.problems.arrays;
 
-import java.util.Arrays;
-
 public class TimeToBuySellStock {
 
     public static void main(String[] args) {
@@ -12,7 +10,7 @@ public class TimeToBuySellStock {
     }
 
     public int maxProfit(int[] prices) {
-        int output = 0;
+        int maximumProfit = 0;
         int minElement = prices[0];
         int index = 0;
 
@@ -22,12 +20,12 @@ public class TimeToBuySellStock {
                 index = i;
             }
 
-            int maxDiff = prices[i] - prices[index];
-            if(output < maxDiff) {
-                output = maxDiff;
+            int difference = prices[i] - prices[index];
+            if(maximumProfit < difference) {
+                maximumProfit = difference;
             }
         }
 
-        return output;
+        return maximumProfit;
     }
 }

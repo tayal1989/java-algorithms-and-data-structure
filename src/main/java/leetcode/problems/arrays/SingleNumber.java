@@ -29,7 +29,7 @@ public class SingleNumber {
         }
 
         for (Map.Entry<Integer, Integer> entry: map.entrySet()) {
-            if(map.get(entry.getKey()) == 1) {
+            if (map.get(entry.getKey()) == 1) {
                 return entry.getKey();
             }
         }

@@ -1,9 +1,5 @@
 package leetcode.problems.arrays;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-
 public class MaxSubArrayAvg {
 
     public static void main(String[] args) {
@@ -25,7 +21,7 @@ public class MaxSubArrayAvg {
         double maxSum = currentSum;
 
         for (int i = k; i < nums.length; i++) {
-            currentSum = currentSum + nums[i] - nums[i - k];
+            currentSum = currentSum + nums[i] - nums[i - k];    // Sliding window technique
 
             if(maxSum < currentSum) {
                 maxSum = currentSum;

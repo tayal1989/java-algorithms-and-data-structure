@@ -20,18 +20,20 @@ public class ValidAnagrams {
         Map<Character, Integer> map2 = new HashMap<>();
 
         for(int i = 0; i < s.length(); i++) {
-            if(map1.get(s.charAt(i)) != null) {
-                map1.put(s.charAt(i), map1.get(s.charAt(i)) + 1);
+            char ch = s.charAt(i);
+            if(map1.get(ch) != null) {
+                map1.put(ch, map1.get(ch) + 1);
             } else {
-                map1.put(s.charAt(i), 1);
+                map1.put(ch, 1);
             }
         }
 
         for(int i = 0; i < t.length(); i++) {
-            if(map2.get(t.charAt(i)) != null) {
-                map2.put(t.charAt(i), map2.get(t.charAt(i)) + 1);
+            char ch = t.charAt(i);
+            if(map2.get(ch) != null) {
+                map2.put(ch, map2.get(ch) + 1);
             } else {
-                map2.put(t.charAt(i), 1);
+                map2.put(ch, 1);
             }
         }
 

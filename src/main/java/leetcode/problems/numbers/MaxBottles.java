@@ -13,10 +13,10 @@ public class MaxBottles {
         int sum = numBottles;
 
         while (numBottles >= numExchange) {
-            int rem = numBottles % numExchange;
-            numBottles = numBottles / numExchange;
-            sum += numBottles;
-            numBottles = numBottles + rem;
+            int rem = numBottles % numExchange; // 10%3 = 1, 4%3 = 1
+            numBottles = numBottles / numExchange;  // 10/3 = 3, 4/3 = 1
+            sum += numBottles;  // 13, 14
+            numBottles = numBottles + rem;  // 4, 2
         }
 
         return sum;

@@ -1,5 +1,7 @@
 package com.learning.arrays;
 
+import java.util.Arrays;
+
 /**
  * <h1>TwoLargestNumberInArray</h1>
  * The TwoLargestNumberInArray.java program will find the largest two numbers
@@ -22,9 +24,9 @@ public class TwoLargestNumberInArray {
 		
 		int[] arr = {8, 9, 11, 12, 12} ;
 		
-		int largestNo = arr[0] ;
-		int secondLargestNo = arr[1] ;
-		int thirdLargestNo = arr[2] ;
+		int largestNo = Integer.MIN_VALUE;
+		int secondLargestNo = Integer.MIN_VALUE;
+		int thirdLargestNo = Integer.MIN_VALUE;
 		
 		for(int i = 0 ; i < arr.length ; i++) {
 			
@@ -34,7 +36,7 @@ public class TwoLargestNumberInArray {
 				largestNo = arr[i] ;
 			}
 			
-			if((arr[i] < largestNo) && (arr[i] > secondLargestNo) && (arr[i] != largestNo)){
+			if(secondLargestNo < arr[i] && arr[i] != largestNo){
 				//thirdLargestNo = secondLargestNo ;	// To find 3rd largest no
 				secondLargestNo = arr[i] ;
 			}	

@@ -5,6 +5,17 @@ package com.learning.singlylinkedlist;
 public class SinglyLinkedList {
 	
 	private ListNode head;
+
+    // 01 Program
+    private static class ListNode {
+        private int data;
+        private ListNode next;
+
+        public ListNode(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
 	
 	public void printList() {
 		ListNode current = head;
@@ -16,11 +27,12 @@ public class SinglyLinkedList {
 	}
 	
 	public int lengthOfNode() {
-		ListNode current = head;
-		int count = 0;
 		if(head == null) {			
-			return count;
+			return 0;
 		}
+
+        ListNode current = head;
+        int count = 0;
 		
 		while(current != null) {
 			count++;
@@ -192,7 +204,7 @@ public class SinglyLinkedList {
 		ListNode second = new ListNode(20);
 		ListNode third = new ListNode(30);
 		ListNode fourth = new ListNode(40);
-		
+
 		sll.head = first;
 		first.next = second;
 		second.next = third;

@@ -2,12 +2,12 @@ package com.learning.singlylinkedlist;
 
 // 01 Program
 
-public class ListNode {
+public class SampleNode {
 
 	public int data;
-	public ListNode next;
+	public SampleNode next;
 	
-	public ListNode(int data) {
+	public SampleNode(int data) {
 		this.data = data;
 		this.next = null;
 	}

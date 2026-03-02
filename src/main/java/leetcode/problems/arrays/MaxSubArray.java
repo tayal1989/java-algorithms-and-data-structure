@@ -31,7 +31,7 @@ public class MaxSubArray {
                 currentSum = currentSum + nums[i];
             }
 
-            if (currentSum > maxSum) {
+            if (maxSum < currentSum) {
                 maxSum = currentSum;
             }
         }

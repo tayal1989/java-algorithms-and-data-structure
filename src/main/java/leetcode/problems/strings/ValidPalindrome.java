@@ -1,25 +1,23 @@
 package leetcode.problems.strings;
 
-public class CheckPalindrome {
+public class ValidPalindrome {
     public static void main(String[] args) {
-        CheckPalindrome checkPalindrome = new CheckPalindrome();
-
-        System.out.println(checkPalindrome.checkPalindrome("Nitin"));
-        System.out.println(checkPalindrome.checkPalindrome("Malyalam"));
-        System.out.println(checkPalindrome.checkPalindrome("Vishal"));
-        System.out.println(checkPalindrome.checkPalindrome("A man, a plan, a canal: Panama"));
-        System.out.println(checkPalindrome.checkPalindrome("race a car"));
+        System.out.println(checkPalindrome("Nitin"));
+        System.out.println(checkPalindrome("Malyalam"));
+        System.out.println(checkPalindrome("Vishal"));
+        System.out.println(checkPalindrome("A man, a plan, a canal: Panama"));
+        System.out.println(checkPalindrome("race a car"));
 
         System.out.println();
 
-        System.out.println(checkPalindrome.checkPalindromeFastSolution("Nitin"));
-        System.out.println(checkPalindrome.checkPalindromeFastSolution("Malyalam"));
-        System.out.println(checkPalindrome.checkPalindromeFastSolution("Vishal"));
-        System.out.println(checkPalindrome.checkPalindromeFastSolution("A man, a plan, a canal: Panama"));
-        System.out.println(checkPalindrome.checkPalindromeFastSolution("race a car"));
+        System.out.println(checkPalindromeFastSolution("Nitin"));
+        System.out.println(checkPalindromeFastSolution("Malyalam"));
+        System.out.println(checkPalindromeFastSolution("Vishal"));
+        System.out.println(checkPalindromeFastSolution("A man, a plan, a canal: Panama"));
+        System.out.println(checkPalindromeFastSolution("race a car"));
     }
 
-    public boolean checkPalindrome(String s) {
+    public static boolean checkPalindrome(String s) {
         String newString = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
         int start = 0;
         int end = newString.length() - 1;
@@ -34,7 +32,7 @@ public class CheckPalindrome {
         return true;
     }
 
-    public boolean checkPalindromeFastSolution(String s) {
+    public static boolean checkPalindromeFastSolution(String s) {
         if(s.isEmpty()) {
             return true;
         }

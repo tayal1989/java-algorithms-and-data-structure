@@ -1,11 +1,6 @@
 package leetcode.problems.arrays;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 public class MaxSubArray {
-
-    private static final Logger log = LoggerFactory.getLogger(MaxSubArray.class);
 
     public static void main(String[] args) {
         MaxSubArray maxSubArray = new MaxSubArray();

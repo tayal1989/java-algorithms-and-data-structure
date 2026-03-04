@@ -3,12 +3,12 @@ package leetcode.problems.strings;
 public class FirstUniqueCharInString {
 
     public static void main(String[] args) {
-        System.out.println(firstUniqChar("leetcode"));
-        System.out.println(firstUniqChar("loveleetcode"));
-        System.out.println(firstUniqChar("aabb"));
+        System.out.println(firstUniqueChar("leetcode"));
+        System.out.println(firstUniqueChar("loveleetcode"));
+        System.out.println(firstUniqueChar("aabb"));
     }
 
-    public static int firstUniqChar(String s) {
+    public static int firstUniqueChar(String s) {
         int[] arr = new int[26];
 
         for (int i = 0; i < s.length(); i++) {

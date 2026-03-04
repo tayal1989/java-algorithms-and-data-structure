@@ -22,14 +22,13 @@ import java.util.Arrays;
 public class RansomNote {
 
     public static void main(String[] args) {
-        RansomNote sc = new RansomNote();
-        System.out.println(sc.canConstruct("a", "b"));
-        System.out.println(sc.canConstruct("aa", "ab"));
-        System.out.println(sc.canConstruct("aa", "aab"));
-        System.out.println(sc.canConstruct("aab", "baa"));
+        System.out.println(canConstruct("a", "b"));
+        System.out.println(canConstruct("aa", "ab"));
+        System.out.println(canConstruct("aa", "aab"));
+        System.out.println(canConstruct("aab", "baa"));
     }
 
-    public boolean canConstruct(String ransomNote, String magazine) {
+    public static boolean canConstruct(String ransomNote, String magazine) {
         if (ransomNote.length() > magazine.length()) {
             return false;
         }

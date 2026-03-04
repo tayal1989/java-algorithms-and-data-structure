@@ -2,7 +2,7 @@ package leetcode.problems.arrays;
 
 import java.util.Arrays;
 
-public class RunningSumArray {
+public class RunningSumOf1DArray {
 
     public static void main(String[] args) {
         System.out.println(Arrays.toString(runningSum(new int[]{1,2,3,4})));
@@ -11,10 +11,8 @@ public class RunningSumArray {
     }
 
     public static int[] runningSum(int[] nums) {
-        int sum = 0;
-
         for (int i = 0; i < nums.length - 1; i++) {
-            sum = nums[i] + nums[i + 1];
+            int sum = nums[i] + nums[i + 1];
             nums[i + 1] = sum;
         }
 

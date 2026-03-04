@@ -28,7 +28,7 @@ public class ContainerWithMostWater {
                 end--;
             }
 
-            if (currentHeight > maxHeight) {
+            if (maxHeight < currentHeight) {
                 maxHeight = currentHeight;
             }
         }

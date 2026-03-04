@@ -13,10 +13,9 @@ public class TwoSumMediumDifficulty {
     public static int[] twoSum(int[] numbers, int target) {
         int start = 0;
         int end = numbers.length - 1;
-        int sum = 0;
 
         while (start < end) {
-            sum = numbers[start] + numbers[end];
+            int sum = numbers[start] + numbers[end];
             if (sum < target) {
                 start++;
             } else if (sum > target){

@@ -1,42 +1,32 @@
 package leetcode.problems.strings;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 public class ValidAnagrams {
 
     public static void main(String[] args) {
-        ValidAnagrams validAnagrams = new ValidAnagrams();
-        System.out.println(validAnagrams.isAnagram("anagram", "nagaram"));
-        System.out.println(validAnagrams.isAnagram("rat", "car"));
-        System.out.println(validAnagrams.isAnagram("ab", "a"));
-        System.out.println(validAnagrams.isAnagram("aa", "a"));
+        System.out.println(isValidAnagram("anagram", "nagaram"));
+        System.out.println(isValidAnagram("rat", "car"));
+        System.out.println(isValidAnagram("ab", "a"));
+        System.out.println(isValidAnagram("aa", "a"));
     }
 
-    public boolean isAnagram(String s, String t) {
-        if (s.length() != t.length()) return false;
+    public static boolean isValidAnagram(String firstStr, String secondStr) {
+        if (firstStr.length() != secondStr.length()) return false;
 
-        Map<Character, Integer> map1 = new HashMap<>();
-        Map<Character, Integer> map2 = new HashMap<>();
+        int[] arr1 = new int[26];
+        int[] arr2 = new int[26];
 
-        for(int i = 0; i < s.length(); i++) {
-            char ch = s.charAt(i);
-            if(map1.get(ch) != null) {
-                map1.put(ch, map1.get(ch) + 1);
-            } else {
-                map1.put(ch, 1);
-            }
+        for (int i = 0; i < firstStr.length(); i++) {
+            arr1[firstStr.charAt(i) - 'a']++;
         }
 
-        for(int i = 0; i < t.length(); i++) {
-            char ch = t.charAt(i);
-            if(map2.get(ch) != null) {
-                map2.put(ch, map2.get(ch) + 1);
-            } else {
-                map2.put(ch, 1);
-            }
+        for (int i = 0; i < secondStr.length(); i++) {
+            arr2[secondStr.charAt(i) - 'a']++;
         }
 
-        return map1.equals(map2);
+        return Arrays.equals(arr1, arr2);
     }
 }

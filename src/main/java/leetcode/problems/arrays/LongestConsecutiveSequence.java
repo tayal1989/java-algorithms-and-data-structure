@@ -63,7 +63,7 @@ public class LongestConsecutiveSequence {
 
         for (int num : set) {
             // Take the smallest number, if there is a smaller number in the set already present, then ignore
-            if (! set.contains(num - 1)) {
+            if (!set.contains(num - 1)) {
                 int currentNum = num;
                 int currentCount = 1;
                 while (set.contains(currentNum + 1)) {

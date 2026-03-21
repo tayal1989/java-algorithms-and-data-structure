@@ -102,19 +102,16 @@ public class SinglyLinkedList {
 	public ListNode deleteLastNode() {
 		ListNode current = head;
 		if(head == null || head.next == null) {
-			if(head.next == null) {
-				head = null;
-			} else {
-				System.out.println("No nodes");
-			}
 			return head;
 		}
-		
-		while(current.next.next != null) {
+
+        ListNode previous = null;
+		while(current.next != null) {
+            previous = current;
 			current = current.next;
 		}
 		
-		current.next = null;
+		previous.next = null;
 		return current;
 	}
 	

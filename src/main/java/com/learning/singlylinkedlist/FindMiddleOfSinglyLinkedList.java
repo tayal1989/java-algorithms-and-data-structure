@@ -53,6 +53,7 @@ public class FindMiddleOfSinglyLinkedList {
 		fm.push(4);
 		fm.push(5);
 		fm.print();
+
 		System.out.println("Middle Node : " + fm.middle().data);
 	}
 

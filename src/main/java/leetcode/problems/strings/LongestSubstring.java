@@ -5,18 +5,21 @@ import java.util.*;
 public class LongestSubstring {
 
     public static void main(String[] args) {
-        LongestSubstring ls = new LongestSubstring();
-        System.out.println(ls.lengthOfLongestSubstring("abcabcbb"));
-        System.out.println(ls.lengthOfLongestSubstring("bbbbb"));
-        System.out.println(ls.lengthOfLongestSubstring("pwwkew"));
-        System.out.println(ls.lengthOfLongestSubstring("aab"));
-        System.out.println(ls.lengthOfLongestSubstring(""));
-        System.out.println(ls.lengthOfLongestSubstring("p"));
-        System.out.println(ls.lengthOfLongestSubstring("au"));
-        System.out.println(ls.lengthOfLongestSubstring("dvdf"));
+        System.out.println(lengthOfLongestSubstring("abcabcbb"));
+        System.out.println(lengthOfLongestSubstring("bbbbb"));
+        System.out.println(lengthOfLongestSubstring("pwwkew"));
+        System.out.println(lengthOfLongestSubstring("aab"));
+        System.out.println(lengthOfLongestSubstring(""));
+        System.out.println(lengthOfLongestSubstring("p"));
+        System.out.println(lengthOfLongestSubstring("au"));
+        System.out.println(lengthOfLongestSubstring("dvdf"));
     }
 
-    public int lengthOfLongestSubstring(String s) {
+    public static int lengthOfLongestSubstring(String s) {
+        if (s.isEmpty()) {
+            return 0;
+        }
+
         Set<Character> set = new HashSet<>();
         int longestLen = Integer.MIN_VALUE;
 
@@ -32,6 +35,6 @@ public class LongestSubstring {
             longestLen = Math.max(longestLen, right - left + 1);
         }
 
-        return longestLen == Integer.MIN_VALUE ? 0 : longestLen;
+        return longestLen;
     }
 }

@@ -48,6 +48,7 @@ public class ContainsDuplicate {
 
             // If current number is already present in the set, it means it's a duplicate
             if (set.contains(num)) {
+                System.out.println("Duplicate Element : " + num);
                 return true;    // Early return to avoid unnecessary iterations
             }
 
@@ -55,6 +56,7 @@ public class ContainsDuplicate {
             set.add(num);
         }
 
+        System.out.println("No Duplicate Element");
         // If we reach here, no duplicates were found in the array
         return false;
     }

@@ -15,16 +15,19 @@ public class ValidAnagrams {
         if (firstStr.length() != secondStr.length()) return false;
 
         int[] arr1 = new int[26];
-        int[] arr2 = new int[26];
 
         for (int i = 0; i < firstStr.length(); i++) {
             arr1[firstStr.charAt(i) - 'a']++;
         }
 
         for (int i = 0; i < secondStr.length(); i++) {
-            arr2[secondStr.charAt(i) - 'a']++;
+            int freqArr = arr1[secondStr.charAt(i) - 'a'];
+            freqArr--;
+            if (freqArr < 0) {
+                return false;
+            }
         }
 
-        return Arrays.equals(arr1, arr2);
+        return true;
     }
 }

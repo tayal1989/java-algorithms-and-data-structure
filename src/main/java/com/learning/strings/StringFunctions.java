@@ -27,11 +27,8 @@ public class StringFunctions {
 		}
 		
 		System.out.print("Reverse of input string is : ");
-		
-		for(int i = 0; i < input.length ; i++){
-			System.out.print(input[i]);
-		}
-		
+
+        System.out.println(new String(input));
 	}
 	
 	public static void reverseWordInSentence(String inputString){
@@ -39,7 +36,7 @@ public class StringFunctions {
 
 		String result = "" ;
 		
-		for(int i =input.length - 1 ; i >= 0 ; i--){
+		for(int i = input.length - 1 ; i >= 0 ; i--){
 			result += (input[i] + " ");
 		}
 		
